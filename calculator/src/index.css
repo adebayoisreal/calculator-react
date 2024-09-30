@@ -8,17 +8,24 @@ body{
 .App{
   margin-top: 5rem;
   display: grid;
- grid-template-columns: repeat(4,5rem);
- grid-template-rows:repeat(5, 5rem) minmax(5rem,auto) ;
+ grid-template-columns: repeat(4, 5rem);
+ grid-template-rows:repeat(5, 5rem) minmax(5rem, auto) ;
  justify-content: center;
  align-content: center;
+
   
 }
 .top-screen{
   background-color: darkslategray;
   grid-column: 1/-1;
   height: 5rem;
-  display: inline;
+  display: flex;
+  justify-content: end;
+  align-content: end;
+ font-size:3rem;
+ padding-top: 10px;
+ word-wrap: break-word;
+ word-break: break-all;
 }
 .span-two{
   grid-column: span 2;

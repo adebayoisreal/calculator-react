@@ -16,7 +16,7 @@ body{
   
 }
 .top-screen{
-  background-color: darkslategray;
+  background-color: rgb(207, 216, 216);
   grid-column: 1/-1;
   height: 5rem;
   display: flex;
@@ -24,6 +24,7 @@ body{
   align-content: end;
  font-size:3rem;
  padding-top: 10px;
+ padding-right: 10px;
  word-wrap: break-word;
  word-break: break-all;
 }

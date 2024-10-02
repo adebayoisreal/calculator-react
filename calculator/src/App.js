@@ -5,12 +5,14 @@ import './App.css';
 function App() {
   const[calc,setcalc] = useState('')
   const [result, setresult] = useState('')
-  const ops = ['÷', '*', '+', '-','.']
-  const updatecalc = value =>{
+  const ops = ['/', '*', '+', '-','.']
 
+  const updatecalc = value =>{
+   
+    if(calc.length === 10){return}
     if(
-      ops.includes(value) && calc === ' ' ||
-      ops.includes(value) && ops.includes(calc.slice(-1))
+      ops.includes(value) && calc === '' ||
+      ops.includes(value) && ops.includes(calc.charAt(calc.length -1))
     ) {
       return 
     }
@@ -47,7 +49,7 @@ function App() {
       </div>
           <button className='span-two' onClick={clear}>AC</button>
           <button onClick={del}>DEL</button>
-          <button onClick={()=>updatecalc('÷')}>÷</button>
+          <button onClick={()=>updatecalc('/')}>/</button>
           <button  onClick={()=>updatecalc('1')}>1</button>
           <button onClick={()=>updatecalc('2')}>2</button>
           <button onClick={()=>updatecalc('3')}>3</button>
